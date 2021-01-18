@@ -1,6 +1,12 @@
-/* body {
-  background-color: papayawhip;
-} */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 img {
   display: block;

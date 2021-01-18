@@ -19,18 +19,16 @@ function getsImage(e) {
 }
 
 refs.btnLoadMore.addEventListener('click', onLoadMoreBtnClick);
-refs.btnClear.addEventListener('click', resetList);
 
 function onLoadMoreBtnClick() {
   serviceApi.fetchApi().then(hits => {
     updateMarkup(hits);
     refs.btnLoadMore.classList.remove('is-hidden');
   });
-}
 
-function resetList() {
-  refs.list.innerHTML = '';
-  serviceApi.query = '';
-
-  refs.btnLoadMore.classList.add('is-hidden');
+  window.scrollBy({
+    top: window.innerHeight,
+    left: 0,
+    behavior: 'smooth',
+  });
 }
