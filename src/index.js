@@ -4,8 +4,6 @@ import updateMarkup from './js/update';
 import refs from './js/refs';
 import serviceApi from './js/serviceApi';
 
-console.log(window);
-
 refs.formRef.addEventListener('submit', event => {
   event.preventDefault();
   const form = event.currentTarget;
