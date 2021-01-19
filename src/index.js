@@ -17,12 +17,6 @@ refs.formRef.addEventListener('submit', event => {
   serviceApi.fetchApi().then(hits => {
     updateMarkup(hits);
     refs.btnLoadMore.classList.remove('is-hidden');
-
-    window.scrollTo({
-      top: document.documentElement.offsetHeight,
-      left: 0,
-      behavior: 'smooth',
-    });
   });
 });
 
